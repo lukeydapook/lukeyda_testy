@@ -22,7 +22,7 @@ class madLibsLukey
 
         String tvShow = "[tvShow]";
 
-        System.out.println("welcome to madlibs");
+        System.out.println("welcome to angrylibs");
 
         System.out.println("");
 
