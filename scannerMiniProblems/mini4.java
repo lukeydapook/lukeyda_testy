@@ -6,15 +6,14 @@ class mini4
     {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("along with your toxic delight, you need something solid");
-        System.out.println("you eat battery acid, how much did you eat");
+        System.out.println("wat farenheirt");
 
-        int batteryAcid = scan.nextInt();
+        double fahrenheit = scan.nextInt();
 
-        System.out.println("you ate " + batteryAcid + " servings of battery acid");
+        double celcius = (fahrenheit - 32) * 5/9;
 
-        System.out.println("you need MORE");
-        int seconds = batteryAcid * 2;
-        System.out.println("you eated " + seconds + " total servings of battery acid");
+
+        System.out.println("celcus is");
+        System.out.println(celcius);
     }
 }
