@@ -2,37 +2,58 @@ import java.util.Scanner;
 
 class luekyDuplicate
 {
-    public static void main(String args[])
+    public static void main(String args[]) 
     {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("welcom to chokolote restuantw what do you awnt");
-        
-        int [] array = new int[25];
+        String [] itemsOrdered = new String[25];
 
         boolean stopper = false;
+        int index = 0;
+        
+        System.out.println("welcome to mcdonalds how can i help you today. if your order has over 25 items you have to call ahead");
 
         while(stopper != true)
         {
-            System.out.println("so basicly we only sell chocolate mmilk so your inputs are the % of chocolate to milk");
-            System.out.println("if you dont wando support small buisnes then say exit");
-            int changer = scan.nextInt();
+            System.out.println("if that is all just say: finished");
+            String order = scanner.next();
 
-            if(changer.equals("exit"))
+            if(order.equals("finished"))
             {
-                flag = true;
+                stopper = true;
             }
             else
             {
-                
+                itemsOrdered[index] = order;
+                index++;
             }
-
-            
+        
         }
 
-        for(int externalValue = 0; externalValue < ammount + 1; externalValue++)
+        index = 0;
+
+        String dupeName = things;
+        boolean dupedBozo = false;
+
+        for (int i = 0; i < index - 1; i++) 
         {
-            System.out.print("test #" + externalValue + " ");
+            for (int j = i + 1; j < index; j++) 
+            {
+                while(itemsOrdered[i].equals(itemsOrdered[j])) 
+                {
+                    dupedBozo = true;
+                    dupeName = itemsOrdered[i];
+                }
+            }
         }
-    }
+
+        if(dupedBozo = true) 
+        {
+            System.out.println("you wanted multiple " + dupeName + "s so i added them together on your recipt");
+        } 
+        else 
+        {
+            System.out.println("have a nice day (you had no duplicates)");
+        }
+    }  
 }
