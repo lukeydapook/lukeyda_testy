@@ -32,14 +32,15 @@ class luekyDuplicate
 
         index = 0;
 
-        String dupeName = things;
+        String dupeName = "";
         boolean dupedBozo = false;
 
-        for (int i = 0; i < index - 1; i++) 
+        for (int i = 0; i < 25; i++) 
         {
-            for (int j = i + 1; j < index; j++) 
+            for (int j = i + 1; j < 25 && itemsOrdered[j]!=null; j++) 
             {
-                while(itemsOrdered[i].equals(itemsOrdered[j])) 
+                //System.out.print("I am in the looooooop");
+                if(itemsOrdered[i].equals(itemsOrdered[j])) 
                 {
                     dupedBozo = true;
                     dupeName = itemsOrdered[i];
@@ -47,9 +48,9 @@ class luekyDuplicate
             }
         }
 
-        if(dupedBozo = true) 
+        if(dupedBozo == true) 
         {
-            System.out.println("you wanted multiple " + dupeName + "s so i added them together on your recipt");
+            System.out.println("you wanted multiple " + dupeName + "es, so i added them together on your recipt");
         } 
         else 
         {
